@@ -117,10 +117,19 @@ function onmove(e){
 }
 
 function showInfo() {
-	$('#info').css('display','block');
-	$('#cartoon').css({
+    var $cartoon = $('#cartoon');
+    $cartoon.css('padding-left','10%');
+
+    $('#cartoon').animate({
+        'width' : '30%'
+    },100,'linear',function(){
+        $('#info').css('display','block');
+    });
+
+
+	/*$('#cartoon').css({
 		'float': 'right',
 		'padding-left' : '30%'
 		
-	});
+	});*/
 }
